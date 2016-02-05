@@ -1,4 +1,4 @@
-# react-download-toolbar
+# react-download-link
 
 A simple toolbar meant to download data from a client-side table.
 
