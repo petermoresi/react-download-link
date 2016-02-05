@@ -6,7 +6,7 @@ Design to be used with browserify or webpack.
 
 Install with:
 
-	npm install --save-dev react-download-link
+	npm install --save react-download-link
 
 Include with:
 
