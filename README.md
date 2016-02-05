@@ -11,5 +11,14 @@ Install with:
 Include with:
 
 ```js
-import Do
+import DownloadLink from 'react-download-link'
+```
+
+Use:
+
+```html
+<DownloadLink
+	filename="myfile.txt"
+	label="Save to disk"
+	export={() => Promise.resolve("My cached data")} />
 ```
