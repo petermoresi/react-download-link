@@ -1,6 +1,6 @@
 # react-download-link
 
-A simple toolbar meant to download data from a client-side table.
+A simple component to download data from a client-side cache (e.g. flux, redux).
 
 Design to be used with browserify or webpack.
 
