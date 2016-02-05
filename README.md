@@ -20,5 +20,14 @@ Use:
 <DownloadLink
 	filename="myfile.txt"
 	label="Save to disk"
+	export={() => "My cached data"} />
+```
+
+Or with Promises:
+
+```html
+<DownloadLink
+	filename="myfile.txt"
+	label="Save to disk"
 	export={() => Promise.resolve("My cached data")} />
 ```
