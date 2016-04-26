@@ -6,7 +6,7 @@ const DownloadLink = React.createClass({
     filename: React.PropTypes.string,
     label: React.PropTypes.string,
     style: React.PropTypes.object,
-    export: React.PropTypes.function,
+    exportFile: React.PropTypes.function,
   },
 
   getDefaultProps() {
@@ -14,7 +14,7 @@ const DownloadLink = React.createClass({
       filename: 'file.txt',
       label: 'Save',
       style: { margin: '5px 5px 0px 0px', textDecoration: 'underline', color: 'blue', cursor: 'pointer' },
-      export: () => {}
+      exportFile: () => {}
     }
   },
 
@@ -39,7 +39,7 @@ const DownloadLink = React.createClass({
     }
 
     var fileType = event.target.innerText,
-    text = this.props.export(fileType)
+    text = this.props.exportFile(fileType)
 
     if (text instanceof Promise) {
       text.then(
@@ -54,6 +54,7 @@ const DownloadLink = React.createClass({
   render: function() {
     return (
       <a style={ this.props.style }
+        href="javascript:void(0)"
         onClick={ this.handleDownloadClick }>
         {this.props.label}
       </a>

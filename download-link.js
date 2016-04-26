@@ -13,11 +13,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var DownloadLink = _react2.default.createClass({
   displayName: 'DownloadLink',
 
+
   propTypes: {
     filename: _react2.default.PropTypes.string,
     label: _react2.default.PropTypes.string,
     style: _react2.default.PropTypes.object,
-    export: _react2.default.PropTypes.function
+    exportFile: _react2.default.PropTypes.function
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -25,9 +26,10 @@ var DownloadLink = _react2.default.createClass({
       filename: 'file.txt',
       label: 'Save',
       style: { margin: '5px 5px 0px 0px', textDecoration: 'underline', color: 'blue', cursor: 'pointer' },
-      export: function _export() {}
+      exportFile: function exportFile() {}
     };
   },
+
 
   handleDownloadClick: function handleDownloadClick(event) {
     var _this = this;
@@ -51,7 +53,7 @@ var DownloadLink = _react2.default.createClass({
     }
 
     var fileType = event.target.innerText,
-        text = this.props.export(fileType);
+        text = this.props.exportFile(fileType);
 
     if (text instanceof Promise) {
       text.then(function (result) {
@@ -66,6 +68,7 @@ var DownloadLink = _react2.default.createClass({
     return _react2.default.createElement(
       'a',
       { style: this.props.style,
+        href: 'javascript:void(0)',
         onClick: this.handleDownloadClick },
       this.props.label
     );
