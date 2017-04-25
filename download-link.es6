@@ -6,7 +6,7 @@ const DownloadLink = React.createClass({
     filename: React.PropTypes.string,
     label: React.PropTypes.string,
     style: React.PropTypes.object,
-    exportFile: React.PropTypes.function,
+    exportFile: React.PropTypes.func,
   },
 
   getDefaultProps() {

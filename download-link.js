@@ -18,7 +18,7 @@ var DownloadLink = _react2.default.createClass({
     filename: _react2.default.PropTypes.string,
     label: _react2.default.PropTypes.string,
     style: _react2.default.PropTypes.object,
-    exportFile: _react2.default.PropTypes.function
+    exportFile: _react2.default.PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
