@@ -1,6 +1,6 @@
 {
   "name": "react-download-link",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A React.js component to download a file.",
   "main": "download-link.js",
   "scripts": {
