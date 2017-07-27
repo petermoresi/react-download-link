@@ -4,7 +4,11 @@ const DownloadLink = React.createClass({
 
   propTypes: {
     filename: React.PropTypes.string,
-    label: React.PropTypes.string,
+    label: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.number,
+      React.PropTypes.object,
+    ]),
     style: React.PropTypes.object,
     exportFile: React.PropTypes.func,
   },
