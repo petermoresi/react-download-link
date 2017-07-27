@@ -5,7 +5,7 @@ class DownloadLink extends Component {
   handleDownloadClick(event) {
     function magicDownload(text, fileName) {
       const blob = new Blob([text], {
-        type: 'text/csv;charset=utf8;'
+        type: 'text/csv;charset=utf8;',
       });
 
       // create hidden link
@@ -21,15 +21,15 @@ class DownloadLink extends Component {
       event.stopPropagation();
     }
 
-    const fileType = event.target.innerText,
-    text = this.props.exportFile(fileType)
+    const fileType = event.target.innerText;
+    const text = this.props.exportFile(fileType);
 
     if (text instanceof Promise) {
       text.then(
-        result => magicDownload(result, this.props.filename)
-      )
+        result => magicDownload(result, this.props.filename),
+      );
     } else {
-      magicDownload(text, this.props.filename)
+      magicDownload(text, this.props.filename);
     }
   }
 
