@@ -54,8 +54,8 @@ var DownloadLink = function (_Component) {
         event.stopPropagation();
       }
 
-      var fileType = event.target.innerText,
-          text = this.props.exportFile(fileType);
+      var fileType = event.target.innerText;
+      var text = this.props.exportFile(fileType);
 
       if (text instanceof Promise) {
         text.then(function (result) {
@@ -72,7 +72,7 @@ var DownloadLink = function (_Component) {
         'a',
         { style: this.props.style,
           href: 'javascript:void(0)',
-          onClick: this.handleDownloadClick },
+          onClick: this.handleDownloadClick.bind(this) },
         this.props.label
       );
     }

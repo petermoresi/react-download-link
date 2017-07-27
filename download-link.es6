@@ -36,8 +36,8 @@ class DownloadLink extends Component {
   render() {
     return (
       <a style={ this.props.style }
-        href="javascript:void(0)"
-        onClick={ this.handleDownloadClick }>
+        href='javascript:void(0)'
+        onClick={ this.handleDownloadClick.bind(this) }>
         {this.props.label}
       </a>
     );
