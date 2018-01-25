@@ -4,7 +4,7 @@
   "description": "A React.js component to download a file.",
   "main": "download-link.js",
   "scripts": {
-    "build": "babel download-link.es --out-file download-link.js",
+    "build": "babel download-link.es6 --out-file download-link.js",
     "test": "echo \"NO TESTS\""
   },
   "keywords": [
