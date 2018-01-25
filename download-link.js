@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -6,11 +6,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = require('prop-types');
+var _propTypes = require("prop-types");
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -32,21 +32,21 @@ var DownloadLink = function (_Component) {
   }
 
   _createClass(DownloadLink, [{
-    key: 'handleDownloadClick',
+    key: "handleDownloadClick",
     value: function handleDownloadClick(event) {
       var _this2 = this;
 
       function magicDownload(text, fileName) {
         var blob = new Blob([text], {
-          type: 'text/csv;charset=utf8;'
+          type: "text/csv;charset=utf8;"
         });
 
         // create hidden link
-        var element = document.createElement('a');
+        var element = document.createElement("a");
         document.body.appendChild(element);
-        element.setAttribute('href', window.URL.createObjectURL(blob));
-        element.setAttribute('download', fileName);
-        element.style.display = '';
+        element.setAttribute("href", window.URL.createObjectURL(blob));
+        element.setAttribute("download", fileName);
+        element.style.display = "";
 
         element.click();
 
@@ -66,13 +66,15 @@ var DownloadLink = function (_Component) {
       }
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'a',
-        { style: this.props.style,
-          href: 'javascript:void(0)',
-          onClick: this.handleDownloadClick.bind(this) },
+        "a",
+        {
+          style: this.props.style,
+          href: "javascript:void(0)",
+          onClick: this.handleDownloadClick.bind(this)
+        },
         this.props.children || this.props.label
       );
     }
@@ -82,9 +84,14 @@ var DownloadLink = function (_Component) {
 }(_react.Component);
 
 DownloadLink.defaultProps = {
-  filename: 'file.txt',
-  label: 'Save',
-  style: { margin: '5px 5px 0px 0px', textDecoration: 'underline', color: 'blue', cursor: 'pointer' },
+  filename: "file.txt",
+  label: "Save",
+  style: {
+    margin: "5px 5px 0px 0px",
+    textDecoration: "underline",
+    color: "blue",
+    cursor: "pointer"
+  },
   exportFile: function exportFile() {}
 };
 
