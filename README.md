@@ -6,7 +6,9 @@ Design to be used with browserify or webpack.
 
 Install with:
 
-    npm install --save react-download-link
+```sh
+npm install --save react-download-link
+```
 
 Include with:
 
@@ -16,7 +18,7 @@ import DownloadLink from "react-download-link";
 
 Use:
 
-```html
+```xml
 <DownloadLink
 	filename="myfile.txt"
 	exportFile={() => "My cached data"}
@@ -27,7 +29,7 @@ Use:
 
 Or with Promises:
 
-```html
+```xml
 <DownloadLink
 	filename="myfile.txt"
 	exportFile={() => Promise.resolve("My cached data")}
