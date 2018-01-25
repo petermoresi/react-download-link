@@ -73,7 +73,7 @@ var DownloadLink = function (_Component) {
         { style: this.props.style,
           href: 'javascript:void(0)',
           onClick: this.handleDownloadClick.bind(this) },
-        this.props.label
+        this.props.children || this.props.label
       );
     }
   }]);
