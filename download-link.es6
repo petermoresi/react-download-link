@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class DownloadLink extends Component {
   handleDownloadClick(event) {
     function magicDownload(text, fileName) {
       const blob = new Blob([text], {
-        type: 'text/csv;charset=utf8;',
+        type: "text/csv;charset=utf8;"
       });
 
       // create hidden link
-      const element = document.createElement('a');
+      const element = document.createElement("a");
       document.body.appendChild(element);
-      element.setAttribute('href', window.URL.createObjectURL(blob));
-      element.setAttribute('download', fileName);
-      element.style.display = '';
+      element.setAttribute("href", window.URL.createObjectURL(blob));
+      element.setAttribute("download", fileName);
+      element.style.display = "";
 
       element.click();
 
@@ -25,9 +25,7 @@ class DownloadLink extends Component {
     const text = this.props.exportFile(fileType);
 
     if (text instanceof Promise) {
-      text.then(
-        result => magicDownload(result, this.props.filename),
-      );
+      text.then(result => magicDownload(result, this.props.filename));
     } else {
       magicDownload(text, this.props.filename);
     }
@@ -35,9 +33,11 @@ class DownloadLink extends Component {
 
   render() {
     return (
-      <a style={ this.props.style }
-        href='javascript:void(0)'
-        onClick={ this.handleDownloadClick.bind(this) }>
+      <a
+        style={this.props.style}
+        href="javascript:void(0)"
+        onClick={this.handleDownloadClick.bind(this)}
+      >
         {this.props.children || this.props.label}
       </a>
     );
@@ -45,10 +45,15 @@ class DownloadLink extends Component {
 }
 
 DownloadLink.defaultProps = {
-  filename: 'file.txt',
-  label: 'Save',
-  style: { margin: '5px 5px 0px 0px', textDecoration: 'underline', color: 'blue', cursor: 'pointer' },
-  exportFile: () => {},
+  filename: "file.txt",
+  label: "Save",
+  style: {
+    margin: "5px 5px 0px 0px",
+    textDecoration: "underline",
+    color: "blue",
+    cursor: "pointer"
+  },
+  exportFile: () => {}
 };
 
 DownloadLink.propTypes = {
@@ -56,10 +61,10 @@ DownloadLink.propTypes = {
   label: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
-    PropTypes.object,
+    PropTypes.object
   ]),
   style: PropTypes.object,
-  exportFile: PropTypes.func,
+  exportFile: PropTypes.func
 };
 
 export default DownloadLink;

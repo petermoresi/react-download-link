@@ -6,12 +6,12 @@ Design to be used with browserify or webpack.
 
 Install with:
 
-	npm install --save react-download-link
+    npm install --save react-download-link
 
 Include with:
 
 ```js
-import DownloadLink from 'react-download-link'
+import DownloadLink from "react-download-link";
 ```
 
 Use:

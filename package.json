@@ -1,17 +1,13 @@
 {
   "name": "react-download-link",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A React.js component to download a file.",
   "main": "download-link.js",
   "scripts": {
     "build": "babel download-link.es6 --out-file download-link.js",
     "test": "echo \"NO TESTS\""
   },
-  "keywords": [
-    "react",
-    "react.js",
-    "react-component"
-  ],
+  "keywords": ["react", "react.js", "react-component"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/petermoresi/react-download-link.git"
