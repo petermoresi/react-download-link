@@ -68,15 +68,12 @@ var DownloadLink = function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react2.default.createElement(
-        "a",
-        {
-          style: this.props.style,
-          href: "javascript:void(0)",
-          onClick: this.handleDownloadClick.bind(this)
-        },
-        this.props.children || this.props.label
-      );
+      return _react2.default.createElement(this.props.tagName || "a", {
+        style: this.props.style,
+        className: this.props.className,
+        href: "javascript:void(0)",
+        onClick: this.handleDownloadClick.bind(this)
+      }, this.props.label);
     }
   }]);
 

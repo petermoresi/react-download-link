@@ -33,7 +33,7 @@ class DownloadLink extends Component {
 
   render() {
     return React.createElement(
-      this.props.tagName || "button",
+      this.props.tagName || "a",
       {
         style: this.props.style,
         className: this.props.className,
