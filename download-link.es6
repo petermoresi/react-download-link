@@ -32,14 +32,15 @@ class DownloadLink extends Component {
   }
 
   render() {
-    return (
-      <a
-        style={this.props.style}
-        href="javascript:void(0)"
-        onClick={this.handleDownloadClick.bind(this)}
-      >
-        {this.props.children || this.props.label}
-      </a>
+    return React.createElement(
+      this.props.tagName || "a",
+      {
+        style: this.props.style,
+        className: this.props.className,
+        href: "javascript:void(0)",
+        onClick: this.handleDownloadClick.bind(this)
+      },
+      this.props.label
     );
   }
 }

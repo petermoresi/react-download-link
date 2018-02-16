@@ -37,3 +37,5 @@ Or with Promises:
 		Save to disk
 </DownloadLink>
 ```
+
+The component will default to an anchor tag, but the tagName prop will accept a string of any other HTML tag you prefer, such as 'button'.
