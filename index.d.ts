@@ -1,12 +1,12 @@
-import * as React from "react";
+import { CSSProperties, Component } from "react";
 
 interface DownloadLinkProps {
   filename?: string;
   label?: string | number | JSX.Element;
-  style?: React.CSSProperties;
-  exportFile?(): void;
+  style?: CSSProperties;
+  exportFile?(type?: string): void;
 }
 
-declare class DownloadLink extends React.Component<DownloadLinkProps> {}
+declare class DownloadLink extends Component<DownloadLinkProps> {}
 
 export default DownloadLink;
