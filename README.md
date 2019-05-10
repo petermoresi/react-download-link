@@ -20,22 +20,20 @@ Use:
 
 ```xml
 <DownloadLink
+	label="Save"
 	filename="myfile.txt"
 	exportFile={() => "My cached data"}
->
-		Save to disk
-</DownloadLink>
+/>
 ```
 
 Or with Promises:
 
 ```xml
 <DownloadLink
+	label="Promise to Save"
 	filename="myfile.txt"
 	exportFile={() => Promise.resolve("My cached data")}
->
-		Save to disk
-</DownloadLink>
+/>
 ```
 
 The component will default to an anchor tag, but the tagName prop will accept a string of any other HTML tag you prefer, such as 'button'.
