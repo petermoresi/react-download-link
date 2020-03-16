@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 
 class DownloadLink extends Component {
   handleDownloadClick(event) {
+    event.persist();
+    event.preventDefault();
+
     function magicDownload(text, fileName) {
       const blob = new Blob([text], {
         type: "text/csv;charset=utf8;"
@@ -37,7 +40,7 @@ class DownloadLink extends Component {
       {
         style: this.props.style,
         className: this.props.className,
-        href: "javascript:void(0)",
+        href: "#",
         onClick: this.handleDownloadClick.bind(this)
       },
       this.props.label

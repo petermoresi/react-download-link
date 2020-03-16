@@ -36,6 +36,9 @@ var DownloadLink = function (_Component) {
     value: function handleDownloadClick(event) {
       var _this2 = this;
 
+      event.persist();
+      event.preventDefault();
+
       function magicDownload(text, fileName) {
         var blob = new Blob([text], {
           type: "text/csv;charset=utf8;"
@@ -71,7 +74,7 @@ var DownloadLink = function (_Component) {
       return _react2.default.createElement(this.props.tagName || "a", {
         style: this.props.style,
         className: this.props.className,
-        href: "javascript:void(0)",
+        href: "#",
         onClick: this.handleDownloadClick.bind(this)
       }, this.props.label);
     }
