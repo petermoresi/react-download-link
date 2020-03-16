@@ -64,6 +64,8 @@ var DownloadLink = function (_Component) {
       } else {
         magicDownload(text, this.props.filename);
       }
+
+      return false;
     }
   }, {
     key: "render",
@@ -71,7 +73,7 @@ var DownloadLink = function (_Component) {
       return _react2.default.createElement(this.props.tagName || "a", {
         style: this.props.style,
         className: this.props.className,
-        href: "javascript:void(0)",
+        href: "#",
         onClick: this.handleDownloadClick.bind(this)
       }, this.props.label);
     }

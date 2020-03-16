@@ -29,6 +29,8 @@ class DownloadLink extends Component {
     } else {
       magicDownload(text, this.props.filename);
     }
+
+    return false;
   }
 
   render() {
@@ -37,7 +39,7 @@ class DownloadLink extends Component {
       {
         style: this.props.style,
         className: this.props.className,
-        href: "javascript:void(0)",
+        href: "#",
         onClick: this.handleDownloadClick.bind(this)
       },
       this.props.label
