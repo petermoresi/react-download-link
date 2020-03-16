@@ -36,6 +36,9 @@ var DownloadLink = function (_Component) {
     value: function handleDownloadClick(event) {
       var _this2 = this;
 
+      event.persist();
+      event.preventDefault();
+
       function magicDownload(text, fileName) {
         var blob = new Blob([text], {
           type: "text/csv;charset=utf8;"
@@ -64,8 +67,6 @@ var DownloadLink = function (_Component) {
       } else {
         magicDownload(text, this.props.filename);
       }
-
-      return false;
     }
   }, {
     key: "render",
