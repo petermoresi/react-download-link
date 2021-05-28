@@ -72,6 +72,8 @@ var DownloadLink = function (_Component) {
     key: "render",
     value: function render() {
       return _react2.default.createElement(this.props.tagName || "a", {
+        role: this.props.role || undefined,
+        "data-testid": this.props.testId || undefined,
         style: this.props.style,
         className: this.props.className,
         href: "#",
