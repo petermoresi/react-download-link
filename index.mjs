@@ -38,6 +38,8 @@ class DownloadLink extends Component {
     return React.createElement(
       this.props.tagName || "a",
       {
+        role: this.props.role || undefined,
+        "data-testid": this.props.testId || undefined,
         style: this.props.style,
         className: this.props.className,
         href: "#",
