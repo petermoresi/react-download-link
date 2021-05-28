@@ -7,7 +7,7 @@
   "typings": "./index.d.ts",
   "scripts": {
     "build": "babel index.mjs --out-file index.js",
-    "test": "echo \"NO TESTS\""
+    "test": "jest --env=jsdom"
   },
   "keywords": [
     "react",
